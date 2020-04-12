@@ -5,12 +5,12 @@ import gd3 as gd
 def sig(t):
     return 1.0/(1.0+math.exp(-t))
 
-o = [0,0,0,1] # and gate outputs
-# o = [0,1,1,1] # or gate outputs
+# o = [0,0,0,1] # and gate outputs
+o = [0,1,1,1] # or gate outputs
 # o = [0,1,1,0] # xor gate outputs
 def loss(p):
     [w1,w2,b] = p
-    o0 = sig(w1*0+w2*0+b)       #使用sig函數計算o0-o3值
+    o0 = sig(w1*0+w2*0+b)       #使用sig函數計算o0-o0..o3值
     o1 = sig(w1*0+w2*1+b)
     o2 = sig(w1*1+w2*0+b)
     o3 = sig(w1*1+w2*1+b)
