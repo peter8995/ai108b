@@ -1,8 +1,3 @@
-# 想法
-* 只要把答案改成orgate要的解答就可以了
-
-# code
-```
 import numpy as np
 import math
 import gd3 as gd
@@ -10,8 +5,8 @@ import gd3 as gd
 def sig(t):
     return 1.0/(1.0+math.exp(-t))
 
-# o = [0,0,0,1] # and gate outputs
-o = [0,1,1,1] # or gate outputs
+o = [0,0,0,1] # and gate outputs
+# o = [0,1,1,1] # or gate outputs
 # o = [0,1,1,0] # xor gate outputs
 def loss(p):
     [w1,w2,b] = p
@@ -25,16 +20,3 @@ def loss(p):
 
 p = [0.0, 0.0, 0.0] # [w1,w2,b] 
 gd.gradientDescendent(loss, p, max_loops=1500)      #使用梯度下降法計算
-```
-
-# 結果
-```
-o0=0.433 o1=0.782 o2=0.782 o3=0.944
-o0=0.433 o1=0.782 o2=0.784 o3=0.945
-o0=0.433 o1=0.782 o2=0.782 o3=0.944
-o0=0.433 o1=0.784 o2=0.782 o3=0.945
-o0=0.433 o1=0.782 o2=0.782 o3=0.944
-o0=0.435 o1=0.784 o2=0.784 o3=0.945
-o0=0.433 o1=0.782 o2=0.782 o3=0.944
-1499:p=[ 1.54889878  1.54889878 -0.27075548] f(p)=0.534 gp=[-0.07455864 -0.07455864  0.05598976] glen=0.11939
-```
