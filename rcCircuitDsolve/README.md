@@ -25,3 +25,4 @@ Eq(V(t), exp((C1 - t/R)/C))
 # 參考資料
 http://keejko.blogspot.com/2018/11/python-sympy.html
 https://blog.gtwang.org/useful-tools/sympy-python-library-for-symbolic-mathematics/2/
+http://web.ntnu.edu.tw/~tsungwu/Python_DevOps/Part1_Basics&Math/section6_ODE.html
